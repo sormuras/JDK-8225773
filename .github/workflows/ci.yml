@@ -17,4 +17,8 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         version: 11
-    - run: jshell --show-version -R-Dorg.junit.jupiter.api=org.junit.jupiter.api JDK-8225773.jsh
+    - run: jshell --show-version \
+             -R-Dorg.junit.jupiter.api=org.junit.jupiter.api \
+             -R-Dorg.junit.jupiter.params=org.junit.jupiter.params \
+             -R-Dorg.junit.platform.console=org.junit.platform.console \
+             JDK-8225773.jsh
