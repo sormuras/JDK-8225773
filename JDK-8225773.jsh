@@ -1,7 +1,7 @@
 /open https://github.com/sormuras/bach/raw/master/BUILDING
 run("jdeps", "--version")
 
-var version = System.getProperty("junit.version.suffix", "5.2")
+var version = System.getProperty("junit.version.suffix", "6.0-M1")
 
 get("lib", "org.junit.jupiter", "junit-jupiter", "5." + version)
 get("lib", "org.junit.jupiter", "junit-jupiter-api", "5." + version)
