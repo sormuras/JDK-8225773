@@ -18,6 +18,7 @@ jobs:
       with:
         version: 11
     - run: jshell --show-version -R-Dorg.junit.jupiter.api=org.junit.jupiter.api JDK-8225773.jsh
+      continue-on-error: true
 
   jupiter-params:
     runs-on: ubuntu-latest
@@ -27,6 +28,7 @@ jobs:
       with:
         version: 11
     - run: jshell --show-version -R-Dorg.junit.jupiter.params=org.junit.jupiter.params JDK-8225773.jsh
+      continue-on-error: true
 
   platform-console:
     runs-on: ubuntu-latest
@@ -36,3 +38,4 @@ jobs:
       with:
         version: 11
     - run: jshell --show-version -R-Dorg.junit.platform.console=org.junit.platform.console JDK-8225773.jsh
+      continue-on-error: true
