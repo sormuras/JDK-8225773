@@ -52,7 +52,7 @@ var code = 0
 try {
   code = run("jdeps", args.toArray());
 } catch(Exception e) {
-  e.printStackTrace(System.err);
+  e.printStackTrace(System.out);
   code = 1;
 }
 
