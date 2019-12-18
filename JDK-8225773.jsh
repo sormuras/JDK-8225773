@@ -47,6 +47,5 @@ args.add("--module-path").add("lib")
 args.add("--multi-release").add("BASE")
 args.add("--check")
 args.add(String.join(",", modules))
-run("jdeps", args.toArray())
 
-/exit
+/exit run("jdeps", args.toArray())
