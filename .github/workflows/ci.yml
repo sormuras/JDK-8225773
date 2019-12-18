@@ -10,7 +10,7 @@ jobs:
         version: 11
     - run: jshell --show-version JDK-8225773.jsh
 
-  org.junit.jupiter.api:
+  jupiter-api:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -19,7 +19,7 @@ jobs:
         version: 11
     - run: jshell --show-version -R-Dorg.junit.jupiter.api=org.junit.jupiter.api JDK-8225773.jsh
 
-  org.junit.jupiter.params:
+  jupiter-params:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -28,7 +28,7 @@ jobs:
         version: 11
     - run: jshell --show-version -R-Dorg.junit.jupiter.params=org.junit.jupiter.params JDK-8225773.jsh
 
-  org.junit.platform.console:
+  platform-console:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
