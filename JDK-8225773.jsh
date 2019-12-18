@@ -48,4 +48,12 @@ args.add("--multi-release").add("BASE")
 args.add("--check")
 args.add(String.join(",", modules))
 
-/exit run("jdeps", args.toArray())
+var code = 0
+try {
+  code = run("jdeps", args.toArray());
+} catch(Exception e) {
+  e.printStackTrace(System.err);
+  code = 1;
+}
+
+/exit code
