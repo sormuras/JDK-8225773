@@ -1,7 +1,7 @@
 /open https://github.com/sormuras/bach/raw/master/BUILDING
 run("jdeps", "--version")
 
-var version = "5.2"
+var version = System.getProperty("junit.version.suffix", "5.2")
 
 get("lib", "org.junit.jupiter", "junit-jupiter", "5." + version)
 get("lib", "org.junit.jupiter", "junit-jupiter-api", "5." + version)
@@ -27,12 +27,15 @@ get("lib", "junit", "junit", "4.13-beta-3")
 
 var modules = new ArrayList<String>()
 modules.add("org.junit.jupiter")
-// modules.add("org.junit.jupiter.api") // Contains Kotlin assets...
+// modules.add("org.junit.jupiter.api") // Contains kotlin-related assets...
+Optional.ofNullable(System.getProperty("org.junit.jupiter.api")).ifPresent(modules::add)
 modules.add("org.junit.jupiter.engine")
 modules.add("org.junit.jupiter.migrationsupport")
-// modules.add("org.junit.jupiter.params") // Shadows AssertJ Core JAR...
+// modules.add("org.junit.jupiter.params") // Shadows univocity-parsers JAR...
+Optional.ofNullable(System.getProperty("org.junit.jupiter.params")).ifPresent(modules::add)
 modules.add("org.junit.platform.commons")
-// modules.add("org.junit.platform.console") // Shadows PicoCLI JAR...
+// modules.add("org.junit.platform.console") // Shadows picocli JAR...
+Optional.ofNullable(System.getProperty("org.junit.platform.console")).ifPresent(modules::add)
 modules.add("org.junit.platform.engine")
 modules.add("org.junit.platform.launcher")
 modules.add("org.junit.platform.reporting")
