@@ -1,7 +1,7 @@
 /open https://github.com/sormuras/bach/raw/master/BUILDING
 run("jdeps", "--version")
 
-var version = System.getProperty("junit.version.suffix", "6.0-M1")
+var version = System.getProperty("junit.version.suffix", "7.0")
 
 get("lib", "org.junit.jupiter", "junit-jupiter", "5." + version)
 get("lib", "org.junit.jupiter", "junit-jupiter-api", "5." + version)
@@ -23,7 +23,7 @@ get("lib", "org.junit.platform", "junit-platform-testkit", "1." + version)
 get("lib", "org.apiguardian", "apiguardian-api", "1.1.0")
 get("lib", "org.assertj", "assertj-core", "3.12.2")
 get("lib", "org.opentest4j", "opentest4j", "1.2.0")
-get("lib", "junit", "junit", "4.13-beta-3")
+get("lib", "junit", "junit", "4.13")
 
 var modules = new ArrayList<String>()
 modules.add("org.junit.jupiter")
