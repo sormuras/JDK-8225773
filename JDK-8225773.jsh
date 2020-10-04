@@ -24,7 +24,7 @@ get("lib", "org.apiguardian", "apiguardian-api", "1.1.0")
 get("lib", "org.assertj", "assertj-core", "3.17.2")
 get("lib", "org.opentest4j", "opentest4j", "1.2.0")
 get("lib", "junit", "junit", "4.13")
-get("lib", "https://search.maven.org/remotecontent?filepath=org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10-modular.jar")
+get("lib", URI.create("https://search.maven.org/remotecontent?filepath=org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10-modular.jar"))
 
 var modules = new ArrayList<String>()
 modules.add("org.junit.jupiter")
