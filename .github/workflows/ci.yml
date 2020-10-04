@@ -7,7 +7,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
       with:
-        version: 11
+        java-version: 11
     - run: jshell --show-version JDK-8225773.jsh
 
   jupiter-api:
@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
       with:
-        version: 11
+        java-version: 11
     - run: jshell --show-version -R-Dorg.junit.jupiter.api=org.junit.jupiter.api JDK-8225773.jsh
       continue-on-error: true
 
@@ -26,7 +26,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
       with:
-        version: 11
+        java-version: 11
     - run: jshell --show-version -R-Dorg.junit.jupiter.params=org.junit.jupiter.params JDK-8225773.jsh
       continue-on-error: true
 
@@ -36,6 +36,6 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
       with:
-        version: 11
+        java-version: 11
     - run: jshell --show-version -R-Dorg.junit.platform.console=org.junit.platform.console JDK-8225773.jsh
       continue-on-error: true
