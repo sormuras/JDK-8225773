@@ -21,7 +21,7 @@ get("lib", "org.junit.platform", "junit-platform-suite-api", "1." + version)
 get("lib", "org.junit.platform", "junit-platform-testkit", "1." + version)
 
 get("lib", "org.apiguardian", "apiguardian-api", "1.1.0")
-get("lib", "org.assertj", "assertj-core", "3.12.2")
+get("lib", "org.assertj", "assertj-core", "3.17.2")
 get("lib", "org.opentest4j", "opentest4j", "1.2.0")
 get("lib", "junit", "junit", "4.13")
 
