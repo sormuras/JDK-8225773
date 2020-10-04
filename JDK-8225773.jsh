@@ -1,4 +1,4 @@
-/open https://github.com/sormuras/bach/raw/master/BUILDING
+/open https://github.com/sormuras/bach/raw/2.1/BUILDING
 run("jdeps", "--version")
 
 var version = System.getProperty("junit.version.suffix", "7.0")
